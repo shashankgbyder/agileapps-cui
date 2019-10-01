@@ -1,5 +1,5 @@
 {
-  "name": "agileapps-cui",
+  "name": "@agileapps-dev-com/agileapps-cui",
   "version": "1.0.0",
   "description": "custom user interface package for AgileApps",
   "main": "index.js",
@@ -23,5 +23,13 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agileapps-dev-com/agileapps-cui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agileapps-dev-com/agileapps-cui/issues"
+  },
+  "homepage": "https://github.com/agileapps-dev-com/agileapps-cui#readme"
 }

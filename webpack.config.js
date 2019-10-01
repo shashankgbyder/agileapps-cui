@@ -18,7 +18,7 @@ module.exports = {
     },
 	 proxy: [{
       context: ['/networking', '/ace-lib'],
-      "target": "https://agileapps-instance-path",
+      "target": "https://instance-path",
       "secure": false,
       "changeOrigin": "true"
     }]
