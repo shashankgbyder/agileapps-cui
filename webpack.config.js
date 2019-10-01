@@ -1,0 +1,27 @@
+const path = require('path');
+
+module.exports = {
+  entry: './index.js',
+
+  devServer: {
+    contentBase: path.join(__dirname, "src"),
+    compress: true,
+    port: 8054,
+	https:true,
+	host:"localhost",
+	disableHostCheck:true,
+	
+    historyApiFallback: {
+		index:"/simple/index.html",
+		disableDotRule: true,
+		htmlAcceptHeaders: ['text/html', 'application/xhtml+xml']
+    },
+	 proxy: [{
+      context: ['/networking', '/ace-lib'],
+      "target": "https://agileapps-instance-path",
+      "secure": false,
+      "changeOrigin": "true"
+    }]
+    
+  }
+};
