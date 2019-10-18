@@ -1,44 +1,50 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
   <base href="./">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/ace-lib/styles.css" />
   <link rel="stylesheet" href="/ace-lib/assets/themes/default/css/main.css" />
-  
+
   <!--CUI specified css files -->
-   <link rel="stylesheet" href="assets/css/styles.css" />
- 
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
   <title>My Custom User Interface for AgileApps </title>
 </head>
- 
+
 <body>
-    <!-- The Custom HTML template content goes here -->
-		<div class="jumbotron">
-            <div class="container">
-              <h1 class="display-4">Table grid component</h1>
-              <p class="lead">The table grid component exported as "ace-table-grid" </p>
-              <ace-table-grid id="tableGridId" object-id="cases" css-classlist="" column-meta="subject:Subject:STRING:true@|@description:Description:true:false" page-size="5" input-filter="true" can-paginate="true" allow-multi-select="true" sort-by="subject" sort-order="asc" ></ace-table-grid>
-              <script>
-                const tableGridElem = document.querySelector('#tableGridId');
-                tableGridElem.addEventListener('selectionChange', function (data) {
-                  const selectionData = data.detail;
-                  if (selectionData.length) {
-                    console.log(selectionData);
-                  }
-                });
-                tableGridElem.addEventListener('pageSortChange', function (data) {
-                  const paginatorData = data.detail;
-                  console.log(paginatorData);
-                });
-              </script>
+  <div class="contianer-fluid h-100">
+    <div class="row h-100">
+
+      <div class="col h-100 ">
+        <div class="d-flex align-items-center justify-content-center h-100">
+
+
+          <div class="card">
+            <div class="card-body">
+
+              <h1 class="card-title">Please login</h1>
+
+              <p class="card-subtitle" id="loginMsgContainer">Please login to continue</p>
+              <ace-login-form id="LoginFormElm" css-classlist="ace-login-form bg-white px-4 py-2">
+              </ace-login-form>
+
+
             </div>
           </div>
- 
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <!-- platform assets -->
   <script type="text/javascript" src="/ace-lib/runtime.js"></script>
   <script type="text/javascript" src="/ace-lib/es2015-polyfills.js" nomodule></script>
@@ -46,10 +52,10 @@
   <script type="text/javascript" src="/ace-lib/scripts.js"></script>
   <script type="text/javascript" src="/ace-lib/vendor.js"></script>
   <script type="text/javascript" src="/ace-lib/main.js"></script>
-  
- <!--CUI specified JS files -->
+
+  <!--CUI specified JS files -->
   <script src="assets/js/scripts.js"></script>
- 
+
 </body>
- 
+
 </html>
