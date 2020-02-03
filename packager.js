@@ -1,6 +1,6 @@
 // require modules
 var fs = require('fs');
-var archiver = require('archiver');
+var packager = require('archiver');
 var tmpls = process.argv.slice(2);
 function archive(templatename) {
   
@@ -9,7 +9,7 @@ function archive(templatename) {
 
 // create a file to stream archive data to.
 var output = fs.createWriteStream(__dirname + '/dist/'+template+'.zip');
-var archive = archiver('zip', {
+var archive = packager('zip', {
   zlib: { level: 9 } // Sets the compression level.
 });
  
